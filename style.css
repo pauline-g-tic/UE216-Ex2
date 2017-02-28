@@ -18,7 +18,7 @@ Sommaire :
 body {
     font-family: Arial, Verdana, sans-serif;
     font-size: 12px;
-    line-height: 1.8;
+    line-height: 2;
     background-color: #e7e9eb;
 
 }
@@ -38,12 +38,17 @@ h2 {
     font-size: 2.5em;
 }
 
+h3 {
+    font-size: 2em;
+}
+
 blockquote {
     font-family: Georgia, serif;
     text-align: left;
     font-style: italic;
     color: #aaa;
     margin: 0;
+    text-shadow: -1px 1px 1px rgba(255, 255, 255, 1);
 
 }
 
@@ -51,13 +56,13 @@ blockquote {
     box-shadow: inset 3px 3px 9px 0px rgba(98,113,128,0.75);
     background-color: #b2b9bd;
     border-radius: 5px;
-    padding: 0.5em;
+    padding: 0.5em 1em;
     display: inline-block;
     text-decoration: none;
     font-style: italic;
     color: white;
     text-align: center;
-
+    text-shadow: -1px -1px 1px rgba(134, 148, 155, 1);
 }
 
 /*------------------------------------------------*\
@@ -82,6 +87,11 @@ blockquote {
     float: left;
 }
 
+.one-third {
+    width: 33.33%;
+    float: left;
+}
+
 .text-right {
     text-align: right;
 }
@@ -97,21 +107,38 @@ blockquote {
 form {
     float: right;
 }
+
 input {
-  box-shadow: inset 3px 3px 9px 0px rgba(98, 113, 128, 0.1);
-  border-radius : 5px;
-  padding: .5em 1em;
-  background-color: #d6d9dd;
-  font-style: italic;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  border-top: none;
-  border-right: none;
-  color: #838f95;
+    box-shadow: inset 3px 3px 9px 0px rgba(98, 113, 128, 0.1);
+    border-radius : 5px;
+    padding: .7em 1em;
+    background-color: #d6d9dd;
+    font-style: italic;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    border-top: none;
+    border-right: none;
+    color: #7d8990;
+    text-shadow: -1px 1px 1px rgba(255, 255, 255, 1);
 }
 
-input::placeholder {
-  color: #838f95;
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #7d8990;
+    text-shadow: -1px 1px 1px rgba(255, 255, 255, 1);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #7d8990;
+    text-shadow: -1px 1px 1px rgba(255, 255, 255, 1);
+    opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #7d8990;
+    text-shadow: -1px 1px 1px rgba(255, 255, 255, 1);
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #7d8990;
+    text-shadow: -1px 1px 1px rgba(255, 255, 255, 1);
 }
 /**---- Titre du site ---**/
 
@@ -295,7 +322,26 @@ h1 span.separator {
     text-align: left;
 }
 
-h3{}
+/*------------------------------------------------*\
+
+    5. Featured articles
+
+\*------------------------------------------------*/
+
+#featured-articles article {
+    padding: 0 20px 0 50px;
+}
+
+#featured-articles h3 {
+    position: relative;
+    margin-bottom: 0;
+}
+
+#featured-articles img {
+    position: absolute;
+    left: -50px;
+}
+
 
 ul li {}
 
