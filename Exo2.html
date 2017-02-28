@@ -8,195 +8,215 @@
     <!--comment-->
     <body>
 
-        <!-- début header -->
-        <header>
+        <div class="container">   <!--Ajout de ce div pour centrer la page en 960px-->
 
-            <h1><img src="images/logo.png" alt="Logo UE216">UE<em>216</em> <span class="separator">/</span> <span>just another weblog</span></h1>
 
-            <form>
-                <p>
-                    <label for="search"></label>
-                    <input type="text" value="" placeholder="search this site..." id="search" name="search">
-                </p>
-            </form>
+            <!-- début header -->
+            <header>
+                <form>
+                    <p>
+                        <label for="search" class="hidden">search this site</label> <!-- Je rajoute la classe hidden ici dans un souci d'accessibilité -->
+                        <input type="text" value="" placeholder="search this site..." id="search" name="search">
+                    </p>
+                </form>
 
-            <nav>
+                <h1><img src="images/logo.png" alt="Logo UE216">UE<em>216</em> <span class="separator">/</span> <span>just another weblog</span></h1>
+
+
+                <nav id="primary-nav">
+                    <ul>
+                        <li class="current"><a href="#">blog</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">contact</a>
+                            <ul>
+                                <li><a href="#">some link goes here</a></li>
+                                <li><a href="#">another page link</a></li>
+                                <li><a href="#">this is something or other</a></li>
+                                <li><a href="#">this is a page link</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">portfolio</a></li>
+                        <li><a href="#">support</a></li>
+                    </ul>
+                </nav>
+
+            </header>
+
+            <!--fin header-->
+            <!--début section 1-->
+
+            <div id="main-slider">
+
+                <!--flèches du slider-->
+                <a id="previous-slide" href="#"><img src="images/left_arrow.png" alt="image de la flèche gauche"></a>
+                <a id="next-slide" href="#"><img src="images/right_arrow.png" alt="image de la flèche droite"></a>
+                <!--Fin flèches du slider-->
+
+                <!--sliders-->
+                <ul class="slides">
+                    <li class="current clearfix">
+                        <div class="one-half">
+                            <img src="images/slider.jpeg" alt="Image du Slider">
+                        </div>
+                        <div class="one-half">
+                            <h2>Sed neque ipsum pulvinar eu</h2>
+                            <blockquote>"some sort of quote or description goes here using a custom field"</blockquote>
+                            <p>In dolor odio, faucibus at pellentesque omare, pretium nec diam. Aliquam erat volutpat. Proin vitae sapien et ante convallis hendrerit eu non enim. Nullam elementum fringilia ultrices.In dolor odio, faucibus at pellentesque omare, pretium nec diam. Aliquam erat volutpat. Proin vitae sapien et ante convallis hendrerit eu non enim. Nullam elementum fringilia ultrices.</p>
+                            <p class="text-right"><a href="#" class="read-more">Read More</a></p>
+                        </div>
+                    </li>
+                    <li class="hidden clearfix">
+                        <div class="one-half">
+                            <img src="images/slider.jpeg" alt="Image du Slider">
+                        </div>
+                        <div class="one-half">
+                            <h2>Sed neque ipsum pulvinar eu</h2>
+                            <blockquote>"some sort of quote or description goes here using a custom field"</blockquote>
+                            <p>In dolor odio, faucibus at pellentesque omare, pretium nec diam. Aliquam erat volutpat. Proin vitae sapien et ante convallis hendrerit eu non enim. Nullam elementum fringilia ultrices.</p>
+                            <p class="text-right"><a href="#" class="read-more">Read More</a></p>
+                        </div>
+                    </li>
+                    <li class="hidden clearfix">
+                        <div class="one-half">
+                            <img src="images/slider.jpeg" alt="Image du Slider">
+                        </div>
+                        <div class="one-half">
+                            <h2>Sed neque ipsum pulvinar eu</h2>
+                            <blockquote>"some sort of quote or description goes here using a custom field"</blockquote>
+                            <p>In dolor odio, faucibus at pellentesque omare, pretium nec diam. Aliquam erat volutpat. Proin vitae sapien et ante convallis hendrerit eu non enim. Nullam elementum fringilia ultrices.</p>
+                            <p class="text-right"><a href="#" class="read-more">Read More</a></p>
+                        </div>
+                    </li>
+                    <li class="hidden clearfix">
+                        <div class="one-half">
+                            <img src="images/slider.jpeg" alt="Image du Slider">
+                        </div>
+                        <div class="one-half">
+                            <h2>Sed neque ipsum pulvinar eu</h2>
+                            <blockquote>"some sort of quote or description goes here using a custom field"</blockquote>
+                            <p>In dolor odio, faucibus at pellentesque omare, pretium nec diam. Aliquam erat volutpat. Proin vitae sapien et ante convallis hendrerit eu non enim. Nullam elementum fringilia ultrices.</p>
+                            <p class="text-right"><a href="#" class="read-more">Read More</a></p>
+                        </div>
+                    </li>
+                </ul>
+                <!--fin sliders-->
+
+                <!--boutons de nav du slider-->
+                <ul id="slides-nav">
+                    <li class="current"><a href="#"><img src="images/controller2.png" alt="icone de navigation du slider"></a></li>
+                    <li><a href="#"><img src="images/controller1.png" alt="icone de navigation du slider"></a></li>
+                    <li><a href="#"><img src="images/controller1.png" alt="icone de navigation du slider"></a></li>
+                    <li><a href="#"><img src="images/controller1.png" alt="icone de navigation du slider"></a></li>
+                    <li><a href="#"><img src="images/controller1.png" alt="icone de navigation du slider"></a></li>
+                </ul>
+                <!--Fin bouton de nav du slider-->
+
+            </div>
+            <!--fin section 1-->
+
+            <!--début section 2-->
+            <div id="featured-articles">
+                <article>
+                    <h3>
+                        <img src="images/icon-1.gif" alt="Icône du titre de l'article">
+                        Cras eu eros id erat
+                        <small>Some description about you goes here</small>
+                    </h3>
+                    <p>ut famulos percontatum missos quem ad modum valeant noti hac aegritudine colligati, non ante recipiant domum quam lavacro purgaverint corpus. ita etiam alienis oculis visa metuitur labes</p>
+                    <p class="text-right"><a href="#" class="read-more">Read More</a></p>
+                </article>
+                <article>
+                    <h3>
+                        <img src="images/icon-2.gif" alt="Icône du titre de l'article">
+                        Cras eu eros id erat
+                        <small>Some description about you goes here</small>
+                    </h3>
+                    <p>ut famulos percontatum missos quem ad modum valeant noti hac aegritudine colligati, non ante recipiant domum quam lavacro purgaverint corpus. ita etiam alienis oculis visa metuitur labes</p>
+                    <p class="text-right"><a href="#" class="read-more">Read More</a></p>
+                </article>
+                <article>
+                    <h3>
+                        <img src="images/icon-3.gif" alt="Icône du titre de l'article">
+                        Cras eu eros id erat
+                        <small>Some description about you goes here</small>
+                    </h3>
+                    <p>ut famulos percontatum missos quem ad modum valeant noti hac aegritudine colligati, non ante recipiant domum quam lavacro purgaverint corpus. ita etiam alienis oculis visa metuitur labes</p>
+                    <p class="text-right"><a href="#" class="read-more">Read More</a></p>
+                </article>
+            </div>
+            <!--fin section 2-->
+
+            <!--début section 3-->
+            <div id="others-articles">
+                <article>
+                    <h2>Cras eu eros id dui portittor luctus quam</h2>
+                    <p>
+                        <img src="images/franklin.jpg" alt="Photo de l'auteur de l'article">
+                        Sed maximum est in amicitia parem esse inferiori. Saepe enim excellentiae quaedam sunt, qualis erat Scipionis in nostro, ut ita dicam, grege. Numquam se ille Philo, numquam Rupilio, numquam Mummio anteposuit, numquam inferioris ordinis amicis, Q. vero Maximum fratrem, egregium virum omnino, sibi nequaquam parem, quod is anteibat aetate, tamquam superiorem colebat suosque omnes per se posse esse ampliores volebat.
+                    </p>
+                </article>
+
+                <!--Ici les minis onglets-->
+                <div class="tabs">
+                    <ul>
+                        <li><a href="#recent">Recent</a></li>
+                        <li class="current"><a href="#popular">Popular</a></li>
+                        <li><a href="#random">Random</a></li>
+                    </ul>
+                </div>
+                <!--fin des mini onglets-->
+
+                <!--contenu des mini onglets où n'apparait que la class "current"-->
+                <div id="recent" class="hidden">
+                    <h3>From The Blog</h3>
+                    <ul>
+                        <li><a href="#">Sed neque ispum pulvinar eu</a></li>
+                        <li><a href="#">Cras eu eros id dui portitor</a></li>
+                        <li><a href="#">Vivamus vitae nibh id quam</a></li>
+                        <li><a href="#">Aenean vulputate fermentuim ante</a></li>
+                        <li><a href="#">Ut sagittis ultrices uma eget erat</a></li>
+                        <li><a href="#">Vivamus vitae nibh id quam</a></li>
+                    </ul>
+                </div>
+                <div id="popular" class="current">
+                    <h3>From The Blog</h3>
+                    <ul>
+                        <li><a href="#">Sed neque ispum pulvinar eu</a></li>
+                        <li><a href="#">Cras eu eros id dui portitor</a></li>
+                        <li><a href="#">Vivamus vitae nibh id quam</a></li>
+                        <li><a href="#">Aenean vulputate fermentuim ante</a></li>
+                        <li><a href="#">Ut sagittis ultrices uma eget erat</a></li>
+                        <li><a href="#">Vivamus vitae nibh id quam</a></li>
+                    </ul>
+                </div>
+                <div id="random" class="hidden">
+                    <h3>From The Blog</h3>
+                    <ul>
+                        <li><a href="#">Sed neque ispum pulvinar eu</a></li>
+                        <li><a href="#">Cras eu eros id dui portitor</a></li>
+                        <li><a href="#">Vivamus vitae nibh id quam</a></li>
+                        <li><a href="#">Aenean vulputate fermentuim ante</a></li>
+                        <li><a href="#">Ut sagittis ultrices uma eget erat</a></li>
+                        <li><a href="#">Vivamus vitae nibh id quam</a></li>
+                    </ul>
+                </div>
+                <!--fin du contenu des mini onglets-->
+
+            </div>
+
+            <!--début du footer-->
+            <footer>
                 <ul>
                     <li><a href="#">blog</a></li>
                     <li><a href="#">about</a></li>
-                    <li><a href="#">contact</a>
-                        <ul>
-                            <li><a href="#">some link goes here</a></li>
-                            <li><a href="#">another page link</a></li>
-                            <li><a href="#">this is something or other</a></li>
-                            <li><a href="#">this is a page link</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="#">contact</a></li>
                     <li><a href="#">portfolio</a></li>
                     <li><a href="#">support</a></li>
                 </ul>
-            </nav>
-
-        </header>
-
-        <!--fin header-->
-        <!--début section 1-->
-
-        <div id="main-slider">
-
-            <!--flèches du slider-->
-            <a id="next-slide" href="#"></a>
-            <a id="previous-slide" href="#"></a>
-            <!--Fin flèches du slider-->
-
-            <!--sliders-->
-            <ul class="slides">
-                <li class="current">
-                    <img src="images/slider.jpeg" alt="Image du Slider">
-                    <h2>Sed neque ipsum pulvinar eu</h2>
-                    <blockquote>"some sort of quote or description goes here using a custom field"</blockquote>
-                    <p>In dolor odio, faucibus at pellentesque omare, pretium nec diam. Aliquam erat volutpat. Proin vitae sapien et ante convallis hendrerit eu non enim. Nullam elementum fringilia ultrices.</p>
-                    <a href="#">Read More</a>
-                </li>
-                <li class="hidden">
-                    <img src="images/slider.jpeg" alt="Image du Slider">
-                    <h2>Sed neque ipsum pulvinar eu</h2>
-                    <blockquote>"some sort of quote or description goes here using a custom field"</blockquote>
-                    <p>In dolor odio, faucibus at pellentesque omare, pretium nec diam. Aliquam erat volutpat. Proin vitae sapien et ante convallis hendrerit eu non enim. Nullam elementum fringilia ultrices.</p>
-                    <a href="#">Read More</a>
-                </li>
-                <li class="hidden">
-                    <img src="images/slider.jpeg" alt="Image du Slider">
-                    <h2>Sed neque ipsum pulvinar eu</h2>
-                    <blockquote>"some sort of quote or description goes here using a custom field"</blockquote>
-                    <p>In dolor odio, faucibus at pellentesque omare, pretium nec diam. Aliquam erat volutpat. Proin vitae sapien et ante convallis hendrerit eu non enim. Nullam elementum fringilia ultrices.</p>
-                    <a href="#">Read More</a>
-                </li>
-                <li class="hidden">
-                    <img src="images/slider.jpeg" alt="Image du Slider">
-                    <h2>Sed neque ipsum pulvinar eu</h2>
-                    <blockquote>"some sort of quote or description goes here using a custom field"</blockquote>
-                    <p>Et hanc quidem praeter oppida multa duae civitates exornant Seleucia opus Seleuci regis, et Claudiopolis quam deduxit coloniam Claudius Caesar. Isaura enim antehac nimium potens, olim subversa ut rebellatrix interneciva aegre vestigia claritudinis pristinae monstrat admodum pauca.</p>
-                    <a href="#">Read More</a>
-                </li>
-            </ul>
-            <!--fin sliders-->
-
-            <!--boutons de nav du slider-->
-            <ul class="slides-nav">
-                <li class="current"><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-            </ul>
-            <!--Fin bouton de nav du slider-->
+                <p>©My Production</p>
+            </footer>
+            <!--fin du footer-->
 
         </div>
-        <!--fin section 1-->
-
-        <!--début section 2-->
-        <div id="featured-articles">
-            <article>
-                <h3>
-                    <img src="images/icon-1.gif" alt="Icône du titre de l'article">
-                    Cras eu eros id erat
-                    <small>Some description about you goes here</small>
-                </h3>
-                <p>ut famulos percontatum missos quem ad modum valeant noti hac aegritudine colligati, non ante recipiant domum quam lavacro purgaverint corpus. ita etiam alienis oculis visa metuitur labes</p>
-                <p><a>Read More</a></p>
-            </article>
-            <article>
-                <h3>
-                    <img src="images/icon-2.gif" alt="Icône du titre de l'article">
-                    Cras eu eros id erat
-                    <small>Some description about you goes here</small>
-                </h3>
-                <p>ut famulos percontatum missos quem ad modum valeant noti hac aegritudine colligati, non ante recipiant domum quam lavacro purgaverint corpus. ita etiam alienis oculis visa metuitur labes</p>
-                <p><a>Read More</a></p>
-            </article>
-            <article>
-                <h3>
-                    <img src="images/icon-3.gif" alt="Icône du titre de l'article">
-                    Cras eu eros id erat
-                    <small>Some description about you goes here</small>
-                </h3>
-                <p>ut famulos percontatum missos quem ad modum valeant noti hac aegritudine colligati, non ante recipiant domum quam lavacro purgaverint corpus. ita etiam alienis oculis visa metuitur labes</p>
-                <p><a>Read More</a></p>
-            </article>
-        </div>
-        <!--fin section 2-->
-
-        <!--début section 3-->
-        <div id="others-articles">
-            <article>
-                <h2>Cras eu eros id dui portittor luctus quam</h2>
-                <p>
-                    <img src="images/franklin.jpg" alt="Photo de l'auteur de l'article">
-                    Sed maximum est in amicitia parem esse inferiori. Saepe enim excellentiae quaedam sunt, qualis erat Scipionis in nostro, ut ita dicam, grege. Numquam se ille Philo, numquam Rupilio, numquam Mummio anteposuit, numquam inferioris ordinis amicis, Q. vero Maximum fratrem, egregium virum omnino, sibi nequaquam parem, quod is anteibat aetate, tamquam superiorem colebat suosque omnes per se posse esse ampliores volebat.
-                </p>
-            </article>
-
-            <!--Ici les minis onglets-->
-            <div class="tabs">
-                <ul>
-                    <li><a href="#recent">Recent</a></li>
-                    <li class="current"><a href="#popular">Popular</a></li>
-                    <li><a href="#random">Random</a></li>
-                </ul>
-            </div>
-            <!--fin des mini onglets-->
-
-            <!--contenu des mini onglets où n'apparait que la class "current"-->
-            <div id="recent" class="hidden">
-                <h3>From The Blog</h3>
-                <ul>
-                    <li><a href="#">Sed neque ispum pulvinar eu</a></li>
-                    <li><a href="#">Cras eu eros id dui portitor</a></li>
-                    <li><a href="#">Vivamus vitae nibh id quam</a></li>
-                    <li><a href="#">Aenean vulputate fermentuim ante</a></li>
-                    <li><a href="#">Ut sagittis ultrices uma eget erat</a></li>
-                    <li><a href="#">Vivamus vitae nibh id quam</a></li>
-                </ul>
-            </div>
-            <div id="popular" class="current">
-                <h3>From The Blog</h3>
-                <ul>
-                    <li><a href="#">Sed neque ispum pulvinar eu</a></li>
-                    <li><a href="#">Cras eu eros id dui portitor</a></li>
-                    <li><a href="#">Vivamus vitae nibh id quam</a></li>
-                    <li><a href="#">Aenean vulputate fermentuim ante</a></li>
-                    <li><a href="#">Ut sagittis ultrices uma eget erat</a></li>
-                    <li><a href="#">Vivamus vitae nibh id quam</a></li>
-                </ul>
-            </div>
-            <div id="random" class="hidden">
-                <h3>From The Blog</h3>
-                <ul>
-                    <li><a href="#">Sed neque ispum pulvinar eu</a></li>
-                    <li><a href="#">Cras eu eros id dui portitor</a></li>
-                    <li><a href="#">Vivamus vitae nibh id quam</a></li>
-                    <li><a href="#">Aenean vulputate fermentuim ante</a></li>
-                    <li><a href="#">Ut sagittis ultrices uma eget erat</a></li>
-                    <li><a href="#">Vivamus vitae nibh id quam</a></li>
-                </ul>
-            </div>
-            <!--fin du contenu des mini onglets-->
-
-        </div>
-
-        <!--début du footer-->
-        <footer>
-            <ul>
-                <li><a href="#">blog</a></li>
-                <li><a href="#">about</a></li>
-                <li><a href="#">contact</a></li>
-                <li><a href="#">portfolio</a></li>
-                <li><a href="#">support</a></li>
-            </ul>
-            <p>©My Production</p>
-        </footer>
-        <!--fin du footer-->
-
     </body>
 </html>
