@@ -48,7 +48,7 @@ blockquote {
 }
 
 .read-more {
-    box-shadow: inset 10px 10px 3px -8px rgba(102,102,102,0.5);
+    box-shadow: inset 3px 3px 9px 0px rgba(98,113,128,0.75);
     background-color: #b2b9bd;
     border-radius: 5px;
     padding: 0.5em;
@@ -73,8 +73,8 @@ blockquote {
 
 /**---- gestion du float http://fr.learnlayout.com/clearfix.html ---**/
 .clearfix {
-  overflow: auto;
-  zoom: 1;
+    overflow: auto;
+    zoom: 1;
 }
 
 .one-half {
@@ -97,7 +97,22 @@ blockquote {
 form {
     float: right;
 }
+input {
+  box-shadow: inset 3px 3px 9px 0px rgba(98, 113, 128, 0.1);
+  border-radius : 5px;
+  padding: .5em 1em;
+  background-color: #d6d9dd;
+  font-style: italic;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  border-top: none;
+  border-right: none;
+  color: #838f95;
+}
 
+input::placeholder {
+  color: #838f95;
+}
 /**---- Titre du site ---**/
 
 h1 {
@@ -129,7 +144,9 @@ h1 span.separator {
 /**---- Navigation principale ---**/
 
 #primary-nav {
-    height: 3em;
+    height: 2.7em;
+    border: 1px solid #c7ced1;
+    background-color: #f3f4f5;
 }
 
 #primary-nav ul {
@@ -137,10 +154,10 @@ h1 span.separator {
     position:relative;
     float:left;
     margin:0;
-    padding:0;
+    padding:0
 }
 
-#primary-nav ul a{
+#primary-nav ul a {
     display:block;
     color:#333;
     text-decoration:none;
@@ -150,19 +167,34 @@ h1 span.separator {
     padding:0 15px;
 }
 
+#primary-nav > ul > li {
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #c7ced1;
+}
+
 #primary-nav ul li {
     position:relative;
     float:left;
     margin:0;
-    padding:0;
+    padding:0
 }
 
-#primary-nav ul li.current {
-    background-color: #ddd;
-}
-
+#primary-nav ul li.current-menu-item,
 #primary-nav ul li:hover {
-    background-color: #f6f6f6;
+    background:#e8ebec;
+}
+
+#primary-nav > ul > li:hover {
+    padding-bottom: 1px;
+}
+
+#primary-nav > ul > ul > li {
+    background:#f6f6f6;
+}
+
+#primary-nav ul ul li:hover {
+    background:#d6dadd;
 }
 
 #primary-nav ul ul {
@@ -170,24 +202,32 @@ h1 span.separator {
     position:absolute;
     top:100%;
     left:0;
-    background:#fff;
+    background:#e8ebec;
     padding:0;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #c7ced1;
+    box-shadow: 3px 3px 16px 0px rgba(190,192,194,0.8);
 }
 
 #primary-nav ul ul li {
     float:none;
     width:200px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #c7ced1;
 }
 
 #primary-nav ul ul a {
     line-height:120%;
-    padding:10px 15px;
+    padding:10px 15px
 }
 
 #primary-nav ul li:hover > ul {
     display:block;
+    margin-left: -1px;
     z-index: 500;
 }
+
+
 
 /*------------------------------------------------*\
 
