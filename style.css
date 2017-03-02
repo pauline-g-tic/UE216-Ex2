@@ -106,6 +106,19 @@ blockquote {
 .two-third {
     width: 66.66%;
     float: left;
+    border-right: 1px solid #d1d7d9;
+    position: relative;
+}
+
+.two-third::after {
+    content: '';
+    position: absolute;
+    top : 0px;
+    left: 0px;
+    right: -2px;
+    bottom: 0px;
+    border-right: 1px solid #fff;
+    z-index: -1;
 }
 
 .text-right {
@@ -187,7 +200,7 @@ h1 span.separator {
 /**---- Navigation principale ---**/
 
 #primary-nav {
-    height: 2.8em;
+    height: 40px;
     border: 1px solid #c7ced1;
     background-color: #f3f4f5;
 }
@@ -204,9 +217,8 @@ h1 span.separator {
     display:block;
     color:#333;
     text-decoration:none;
-    font-weight:700;
     font-size:12px;
-    line-height:32px;
+    line-height:38px;
     padding:0 15px;
 }
 
@@ -215,6 +227,10 @@ h1 span.separator {
     border-left: 1px solid #fff;
     border-right: 1px solid #c7ced1;
 }
+
+/*#primary-nav > ul > li:hover {
+    padding-bottom: 1px;
+}*/
 
 #primary-nav ul li {
     position:relative;
@@ -277,6 +293,7 @@ h1 span.separator {
 #main-slider {
     padding: 1em 3em;
     position: relative;
+    border-bottom: 1px solid #d1d7d9;
 }
 
 /**---- style général de toutes les listes du slider ---**/
@@ -309,6 +326,8 @@ h1 span.separator {
 #slides-nav {
     position: absolute;
     left: 45%;
+    z-index: 500;
+    bottom: -22px;
 }
 
 #slides-nav li {
@@ -339,8 +358,27 @@ h1 span.separator {
 
 \*------------------------------------------------*/
 
+#featured-articles {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #d1d7d9;
+}
+
+#featured-articles .one-third:not(:last-child) {
+    border-right: 1px solid #d1d7d9;
+    position: relative;
+}
+#featured-articles .one-third:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top : 0px;
+    left: 0px;
+    right: -2px;
+    bottom: 0px;
+    border-right: 1px solid #fff;
+    z-index: -1;
+}
 #featured-articles article {
-    padding: 0 20px 0 50px;
+    padding: 0 20px 20px 80px;
 }
 
 #featured-articles h3 {
@@ -361,6 +399,10 @@ h1 span.separator {
 
 
 /**---- style de l'article ---**/
+
+#others-articles {
+    border-top: 1px solid #fff;
+}
 
 #others-articles article img {
     float: left;
@@ -383,16 +425,16 @@ h1 span.separator {
     margin:0 0;
     -webkit-padding-start:0px; /* reset chrome default */
     list-style: none;
+    padding: 0;
 }
 
 .tabs ul li {
     width: 33.33%;
     display:table-cell;
-    /*    padding:15px 5px;*/
     text-align: center;
     background-color:#f3f4f5;
     border-bottom: 1px solid #c7ced1;
-    border-top: 1px solid #fff;
+    /*    border-top: 1px solid #fff;*/
     border-left: 1px solid #fff;
     border-right: 1px solid #c7ced1;
     list-style: none;
@@ -440,6 +482,18 @@ h1 span.separator {
 }
 
 /**---- style du contenu de la mini nav ---**/
+
+.tab-content {
+    border-bottom: 1px solid #fff;
+}
+
+.tab-content::after {
+    border-top: 1px solid #d1d7d9;
+    content: '';
+    height: 1px;
+    width: 100%;
+    display: block;
+}
 
 #others-articles h3 {
     padding-left: 25px;
@@ -495,11 +549,6 @@ footer ul {
 
 }
 
-/*footer > ul > li {
-    border-top: 1px solid #fff;
-    border-left: 1px solid #fff;
-    border-right: 1px solid #c7ced1;
-}*/
 
 footer ul li {
     margin-top: 0.7em;
@@ -511,7 +560,6 @@ footer ul a {
     display:block;
     color:#333;
     text-decoration:none;
-    font-weight:700;
     font-size:12px;
     line-height:32px;
     padding:0 15px;
